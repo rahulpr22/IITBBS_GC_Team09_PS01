@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">GC Live Scorecard</string>
+    <string name="tab_text_1">Cricket</string>
+    <string name="tab_text_2">Football</string>
+    <string name="tab_text_3">Badminton</string>
+</resources>
