@@ -40,7 +40,6 @@ tools:context=".AdminCricket">
     android:layout_marginTop="30dp"
     android:horizontalSpacing="10dp"
     android:layout_centerHorizontal="true"
-    android:background="@drawable/bg"
     android:numColumns="2"
     android:verticalSpacing="10dp"
     android:gravity="center"

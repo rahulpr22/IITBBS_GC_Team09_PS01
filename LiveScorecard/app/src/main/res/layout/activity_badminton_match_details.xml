@@ -215,7 +215,7 @@
     <ImageView
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:id="@+id/refresh"
+        android:id="@+id/brefresh"
         android:src="@drawable/refresh"
         android:layout_marginTop="15dp"
         android:layout_marginLeft="300dp"
