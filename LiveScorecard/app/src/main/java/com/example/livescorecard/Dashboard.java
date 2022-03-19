@@ -20,28 +20,28 @@ public class Dashboard extends AppCompatActivity {
         cricket.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(Dashboard.this,MainActivity.class);
+                Intent i = new Intent(Dashboard.this,Cricket.class);
                 i.putExtra("sport","cricket");
                 startActivity(i);
             }
         });
 
-        football.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(Dashboard.this,MainActivity.class);
-                i.putExtra("sport","football");
-                startActivity(i);
-            }
-        });
-
-        badminton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(Dashboard.this,MainActivity.class);
-                i.putExtra("sport","badminton");
-                startActivity(i);
-            }
-        });
+//        football.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent i = new Intent(Dashboard.this,MainActivity.class);
+//                i.putExtra("sport","football");
+//                startActivity(i);
+//            }
+//        });
+//
+//        badminton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent i = new Intent(Dashboard.this,MainActivity.class);
+//                i.putExtra("sport","badminton");
+//                startActivity(i);
+//            }
+//        });
     }
 }

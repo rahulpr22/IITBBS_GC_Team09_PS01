@@ -1,9 +1,13 @@
 package com.example.livescorecard;
 
-public class matchData {
-    String team1,team2, team1Score, team2Score, striker1, striker2, bowler, striker1Runs, striker2Runs, bowlerStats, team1OversPlayed, team2OversPlayed;
+public class cricketData {
+    private String team1,team2, team1Score, team2Score, striker1, striker2, bowler, striker1Runs, striker2Runs, bowlerStats, team1OversPlayed, team2OversPlayed;
 
-    public matchData(String team1, String team2, String team1Score, String team2Score, String striker1, String striker2, String bowler, String striker1Runs, String striker2Runs, String bowlerStats, String team1OversPlayed, String team2OversPlayed) {
+
+    public cricketData() {
+    }
+
+    public cricketData(String team1, String team2, String team1Score, String team2Score, String striker1, String striker2, String bowler, String striker1Runs, String striker2Runs, String bowlerStats, String team1OversPlayed, String team2OversPlayed) {
         this.team1 = team1;
         this.team2 = team2;
         this.team1Score = team1Score;
