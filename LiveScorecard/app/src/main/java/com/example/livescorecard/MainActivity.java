@@ -19,32 +19,44 @@ import com.example.livescorecard.databinding.ActivityMainBinding;
 public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding binding;
+    TabLayout tabLayout;
+    ViewPager viewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        binding = ActivityMainBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
+        setContentView(R.layout.activity_main);
 
-        SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(this, getSupportFragmentManager());
-        ViewPager viewPager = binding.viewPager;
-        viewPager.setAdapter(sectionsPagerAdapter);
-        TabLayout tabs = binding.tabs;
-        tabs.setupWithViewPager(viewPager);
-        FloatingActionButton fab = binding.fab;
+        tabLayout=(TabLayout)findViewById(R.id.tabLayout);
+        viewPager=(ViewPager)findViewById(R.id.viewPager);
 
-//        tabs.addTab(tabs.newTab().setText("Cricket"));
-//        tabs.addTab(tabs.newTab().setText("Football"));
-//        tabs.addTab(tabs.newTab().setText("Badminton"));
+        tabLayout.addTab(tabLayout.newTab().setText("Live"));
+        tabLayout.addTab(tabLayout.newTab().setText("Upcoming"));
+        tabLayout.addTab(tabLayout.newTab().setText("Recent"));
+        tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
+        final MyAdapter adapter = new MyAdapter(this,getSupportFragmentManager(), tabLayout.getTabCount());
+        viewPager.setAdapter(adapter);
 
-        fab.setOnClickListener(new View.OnClickListener() {
+        viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+
+        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+            public void onTabSelected(TabLayout.Tab tab) {
+                viewPager.setCurrentItem(tab.getPosition());
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
             }
         });
+
     }
 }

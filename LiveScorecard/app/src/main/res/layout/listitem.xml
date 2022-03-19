@@ -1,0 +1,70 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="10dp"
+    android:background="@drawable/bg"
+    android:layout_centerHorizontal="true">
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:gravity="center_vertical|center"
+        android:text="Team1"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:id="@+id/Team1"
+        />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_below="@+id/Team1"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical|center"
+        android:text="Team2"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="15dp"
+        android:id="@+id/Team2"
+        />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="256/1"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="15dp"
+        android:gravity="center_vertical|center"
+        android:id="@+id/t1score"
+        android:layout_toRightOf="@+id/Team1"
+        android:layout_marginLeft="15dp"/>
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="356/10"
+        android:gravity="center_vertical|center"
+        android:id="@+id/t2score"
+        android:layout_toRightOf="@+id/Team2"
+        android:layout_below="@+id/t1score"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:id="@+id/viewScore"
+        android:background="@color/black"
+        android:layout_toRightOf="@+id/t1score"
+        android:gravity="center_vertical"
+        android:layout_marginTop="80dp"
+        android:layout_marginRight="15dp"
+        android:text="View Score"/>
+
+
+</RelativeLayout>

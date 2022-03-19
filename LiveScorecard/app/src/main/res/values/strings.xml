@@ -3,4 +3,10 @@
     <string name="tab_text_1">Cricket</string>
     <string name="tab_text_2">Football</string>
     <string name="tab_text_3">Badminton</string>
+    <string name="cricket">Cricket</string>
+    <string name="badminton">Badminton</string>
+    <string name="football">Football</string>
+    <string name="todo">TODO</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
