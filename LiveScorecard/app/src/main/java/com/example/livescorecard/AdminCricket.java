@@ -35,12 +35,16 @@ public class AdminCricket extends AppCompatActivity {
                 startActivity(i);
             }
         });
-
+        if (FirebaseDatabase.getInstance() != null)
+        {
+            FirebaseDatabase.getInstance().goOffline();
+        }
+        FirebaseDatabase.getInstance().goOnline();
         DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child("cricket");
         ValueEventListener valueEventListener = new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                ArrayList<cricketData> list = new ArrayList<>();
+                List<cricketData> list = new ArrayList<>();
                 for(DataSnapshot ds : dataSnapshot.getChildren()) {
                     cricketData p = ds.getValue(cricketData.class);
                     Log.d("TAG",p.getBowler()+" :)");
@@ -49,7 +53,7 @@ public class AdminCricket extends AppCompatActivity {
                 Log.d("TAG", String.valueOf(list.size())); //To see is not emplty
                 lv= findViewById(R.id.adminCricketView);
                 AdminCricketAdapter myAdapter=new AdminCricketAdapter(getApplicationContext(), (ArrayList<cricketData>) list);
-                lv.setAdapter((ListAdapter) myAdapter);
+                lv.setAdapter( myAdapter);
                 Cricket.setListViewHeightBasedOnChildren(lv);
             }
 

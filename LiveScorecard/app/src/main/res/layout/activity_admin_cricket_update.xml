@@ -31,7 +31,7 @@
         android:layout_marginTop="10dp"
         android:background="@drawable/text_bg"
         android:textColor="@color/white"
-        android:hint="Team-1 Score:"
+        android:hint="Team-2 Score:"
         android:textColorHint="@color/white"
         android:paddingLeft="20dp"
         android:gravity="center_vertical"

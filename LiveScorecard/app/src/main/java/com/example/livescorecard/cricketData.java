@@ -1,6 +1,8 @@
 package com.example.livescorecard;
 
-public class cricketData {
+import java.io.Serializable;
+
+public class cricketData implements Serializable {
     private String date,team1,team2, team1Score, team2Score, striker1, striker2, bowler, striker1Runs, striker2Runs, bowlerStats,matchId;
     private Long team1OversPlayed;
     private Long team2OversPlayed;

@@ -20,7 +20,8 @@ public class AdminLogin extends AppCompatActivity {
         uid= findViewById(R.id.uid);
         pwd= findViewById(R.id.pwd);
         b= findViewById(R.id.signIn);
-
+        uid.setText("admin123@gmail.com");
+        pwd.setText("12345");
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

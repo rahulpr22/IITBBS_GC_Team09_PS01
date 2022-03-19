@@ -29,7 +29,7 @@ public class AdminCricketAdapter extends ArrayAdapter {
         View listitemView = convertView;
         if (listitemView == null) {
             // Layout Inflater inflates each item to be displayed in GridView.
-            listitemView = LayoutInflater.from(getContext()).inflate(R.layout.listitem, parent, false);
+            listitemView = LayoutInflater.from(getContext()).inflate(R.layout.admincricketlistitem, parent, false);
         }
 
         cricketData product = (cricketData) getItem(position);
@@ -51,22 +51,22 @@ public class AdminCricketAdapter extends ArrayAdapter {
         view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(mcontext, matchSummary.class);
+                Intent i = new Intent(mcontext, AdminCricketUpdate.class);
                 i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_MULTIPLE_TASK);
-                i.putExtra("t1", product.getTeam1());
-                i.putExtra("t2", product.getTeam2());
-                i.putExtra("t1s", product.getTeam1Score());
-                i.putExtra("t2s", product.getTeam2Score());
-                i.putExtra("t1overs", product.getTeam1OversPlayed());
-                i.putExtra("t2overs", product.getTeam2OversPlayed());
-                i.putExtra("s1runs", product.getStriker1Runs());
-                i.putExtra("s1", product.getStriker1());
-                i.putExtra("s2runs", product.getStriker2Runs());
-                i.putExtra("s2", product.getStriker2());
-                i.putExtra("bowler", product.getBowler());
-                i.putExtra("bstats", product.getBowlerStats());
+//                i.putExtra("t1", product.getTeam1());
+//                i.putExtra("t2", product.getTeam2());
+//                i.putExtra("t1s", product.getTeam1Score());
+//                i.putExtra("t2s", product.getTeam2Score());
+//                i.putExtra("t1overs", product.getTeam1OversPlayed());
+//                i.putExtra("t2overs", product.getTeam2OversPlayed());
+//                i.putExtra("s1runs", product.getStriker1Runs());
+//                i.putExtra("s1", product.getStriker1());
+//                i.putExtra("s2runs", product.getStriker2Runs());
+//                i.putExtra("s2", product.getStriker2());
+//                i.putExtra("bowler", product.getBowler());
+//                i.putExtra("bstats", product.getBowlerStats());
                 i.putExtra("mid",product.getMatchId());
-                i.putExtra("obj", (Parcelable) product);
+                i.putExtra("obj", product);
                 mcontext.startActivity(i);
             }
         });
