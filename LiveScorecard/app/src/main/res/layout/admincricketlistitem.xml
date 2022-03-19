@@ -1,0 +1,86 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="10dp"
+    android:background="@drawable/text_bg2"
+    android:layout_centerHorizontal="true">
+
+    <TextView
+        android:layout_width="100dp"
+        android:text="21/02/22"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="15dp"
+        android:gravity="center_vertical|center"
+        android:id="@+id/adminCricketdate"
+        android:layout_height="50dp"/>
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:gravity="center_vertical|center"
+        android:text="Team1"
+        android:layout_below="@+id/adminCricketdate"
+        android:textColor="@color/black"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:id="@+id/adminCricketTeam1"
+        />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_below="@+id/adminCricketTeam1"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical|center"
+        android:text="Team2"
+        android:textColor="@color/black"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="15dp"
+        android:id="@+id/adminCricketTeam2"
+        />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="256/1"
+        android:layout_below="@+id/adminCricketdate"
+        android:textColor="@color/black"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="15dp"
+        android:gravity="center_vertical|center"
+        android:id="@+id/admint1score"
+        android:layout_toRightOf="@+id/adminCricketTeam1"
+        android:layout_marginLeft="15dp"/>
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="356/10"
+        android:textColor="@color/black"
+
+        android:gravity="center_vertical|center"
+        android:id="@+id/admint2score"
+        android:layout_toRightOf="@+id/adminCricketTeam2"
+        android:layout_below="@+id/admint1score"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"/>
+
+    <TextView
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:textColor="@color/white"
+        android:id="@+id/adminUpdateScore"
+        android:background="@drawable/text_bg"
+        android:layout_toRightOf="@+id/admint2score"
+        android:gravity="center_vertical|center"
+        android:layout_marginTop="130dp"
+        android:layout_marginRight="15dp"
+        android:text="Update Score"/>
+
+
+</RelativeLayout>
