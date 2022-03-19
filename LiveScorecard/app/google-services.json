@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "334972160952",
+    "project_id": "live-scorecard-74f43",
+    "storage_bucket": "live-scorecard-74f43.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:334972160952:android:82e61dfcd3f0367e9e1d4d",
+        "android_client_info": {
+          "package_name": "com.example.livescorecard"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "334972160952-2qhkv12tv4cf5psvvqavn0rua495p7ij.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDdj36D4qLtW24bzQefoHpF9lxJhjxgpNw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "334972160952-2qhkv12tv4cf5psvvqavn0rua495p7ij.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
