@@ -71,11 +71,11 @@ public class matchSummary extends AppCompatActivity {
                         t1.setText(obj.getTeam1());
                         t2.setText(obj.getTeam2());
                         t1s.setText(obj.getTeam1Score());
-                        t2s.setText(obj.getTeam1Score());
+                        t2s.setText(obj.getTeam2Score());
                         t1oname.setText(obj.getTeam1()+" Overs Completed");
                         t2oname.setText(obj.getTeam2()+" Overs Completed");
                         t1o.setText(String.valueOf((obj.getTeam1OversPlayed() )));
-                        t1o.setText(String.valueOf((obj.getTeam2OversPlayed() )));
+                        t2o.setText(String.valueOf((obj.getTeam2OversPlayed() )));
                         s1.setText(obj.getStriker1()+"*");
                         s1r.setText(obj.getStriker1Runs());
                         s2.setText(obj.getStriker2());

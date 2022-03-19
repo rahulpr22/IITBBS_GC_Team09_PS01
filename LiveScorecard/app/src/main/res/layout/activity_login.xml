@@ -1,9 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LoginActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:id="@+id/r1"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/text_bg"
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/logo"
+            android:id="@+id/logo"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/logo"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="-50dp"
+            android:layout_marginRight="20dp"
+            android:fontFamily="@font/amaranth"
+            android:gravity="center|center_vertical"
+            android:text="General ChampionShip"
+            android:textColor="@color/white" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_below="@+id/r1"
+        android:background="@drawable/text_bg2"
+        android:layout_margin="30dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:id="@+id/iitlogo"
+            android:layout_height="240dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/iitbbs"/>
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@drawable/text_bg"
+            android:text="Proceed"
+            android:id="@+id/proceed"
+            android:textColor="@color/white"
+            android:layout_below="@id/iitlogo"
+            android:gravity="center_vertical|center"
+            android:layout_centerHorizontal="true"/>
+        <TextView
+            android:layout_width="180dp"
+            android:layout_height="50dp"
+            android:fontFamily="@font/akaya_telivigala"
+            android:text="@string/admin"
+            android:clickable="true"
+            android:background="@drawable/text_bg"
+            android:layout_marginTop="30dp"
+            android:textColor="@color/white"
+            android:id="@+id/login"
+            android:layout_below="@id/proceed"
+            android:gravity="center_vertical|center"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
