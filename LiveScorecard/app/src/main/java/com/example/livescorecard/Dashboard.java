@@ -35,13 +35,13 @@ public class Dashboard extends AppCompatActivity {
 //            }
 //        });
 //
-//        badminton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent i = new Intent(Dashboard.this,MainActivity.class);
-//                i.putExtra("sport","badminton");
-//                startActivity(i);
-//            }
-//        });
+        badminton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(Dashboard.this,Badminton.class);
+                i.putExtra("sport","badminton");
+                startActivity(i);
+            }
+        });
     }
 }

@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.LiveScorecard">
-        <activity android:name=".AdminCricketUpdate"></activity>
+        <activity android:name=".FootballSummary"></activity>
+        <activity android:name=".Football" />
+        <activity android:name=".badmintonMatchDetails" />
+        <activity android:name=".Badminton" />
+        <activity android:name=".AdminCricketUpdate" />
         <activity android:name=".AdminCricketCreateNewMatch" />
         <activity android:name=".AdminCricket" />
         <activity android:name=".AdminDashboard" />
