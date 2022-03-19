@@ -6,14 +6,24 @@
     android:layout_marginLeft="10dp"
     android:layout_marginRight="10dp"
     android:layout_marginTop="10dp"
-    android:background="@drawable/bg"
+    android:background="@drawable/text_bg2"
     android:layout_centerHorizontal="true">
 
+    <TextView
+        android:layout_width="100dp"
+        android:text="21/02/22"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="15dp"
+        android:gravity="center_vertical|center"
+        android:id="@+id/date"
+        android:layout_height="50dp"/>
     <TextView
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:gravity="center_vertical|center"
         android:text="Team1"
+        android:layout_below="@+id/date"
+        android:textColor="@color/black"
         android:layout_marginLeft="15dp"
         android:layout_marginTop="15dp"
         android:id="@+id/Team1"
@@ -26,6 +36,7 @@
         android:layout_marginTop="10dp"
         android:gravity="center_vertical|center"
         android:text="Team2"
+        android:textColor="@color/black"
         android:layout_marginLeft="15dp"
         android:layout_marginBottom="15dp"
         android:id="@+id/Team2"
@@ -35,6 +46,8 @@
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:text="256/1"
+        android:layout_below="@+id/date"
+        android:textColor="@color/black"
         android:layout_marginTop="15dp"
         android:layout_marginRight="15dp"
         android:gravity="center_vertical|center"
@@ -46,6 +59,8 @@
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:text="356/10"
+        android:textColor="@color/black"
+
         android:gravity="center_vertical|center"
         android:id="@+id/t2score"
         android:layout_toRightOf="@+id/Team2"
@@ -55,14 +70,16 @@
         android:layout_marginRight="15dp"
         android:layout_marginLeft="15dp"/>
 
-    <Button
-        android:layout_width="wrap_content"
+    <TextView
+        android:layout_width="90dp"
         android:layout_height="40dp"
+        android:textColor="@color/white"
+
         android:id="@+id/viewScore"
-        android:background="@color/black"
-        android:layout_toRightOf="@+id/t1score"
-        android:gravity="center_vertical"
-        android:layout_marginTop="80dp"
+        android:background="@drawable/text_bg"
+        android:layout_toRightOf="@+id/t2score"
+        android:gravity="center_vertical|center"
+        android:layout_marginTop="130dp"
         android:layout_marginRight="15dp"
         android:text="View Score"/>
 

@@ -2,6 +2,7 @@ package com.example.livescorecard;
 
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -30,17 +31,21 @@ public class productAdapter extends ArrayAdapter {
             // Layout Inflater inflates each item to be displayed in GridView.
             listitemView = LayoutInflater.from(getContext()).inflate(R.layout.listitem, parent, false);
         }
+
         cricketData product = (cricketData) getItem(position);
         TextView t1 = listitemView.findViewById(R.id.Team1);
         TextView t2 = listitemView.findViewById(R.id.Team2);
         TextView t1s = listitemView.findViewById(R.id.t1score);
         TextView t2s = listitemView.findViewById(R.id.t2score);
+        TextView date = listitemView.findViewById(R.id.date);
 
-        Button view = listitemView.findViewById(R.id.viewScore);
+        TextView view = listitemView.findViewById(R.id.viewScore);
         t1.setText(product.getTeam1());
         t2.setText(product.getTeam2());
         t1s.setText(product.getTeam1Score());
-        t2s.setText(product.getTeam1Score());
+        t2s.setText(product.getTeam2Score());
+        date.setText(product.getDate());
+        Log.d("reached",product.getTeam1());
         //desc.setText(product.getDescription());
         //Log.d("test2","logo "+product.getLogo());
         view.setOnClickListener(new View.OnClickListener() {
@@ -60,6 +65,7 @@ public class productAdapter extends ArrayAdapter {
                 i.putExtra("s2", product.getStriker2());
                 i.putExtra("bowler", product.getBowler());
                 i.putExtra("bstats", product.getBowlerStats());
+                i.putExtra("mid",product.getMatchId());
                 mcontext.startActivity(i);
             }
         });

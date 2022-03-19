@@ -16,7 +16,10 @@ import android.widget.Button;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.firebase.ui.database.FirebaseListAdapter;
+import com.google.android.gms.tasks.OnFailureListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -27,12 +30,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Cricket extends AppCompatActivity {
+
     ListView simpleList;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cricket2);
-        Log.d("reached","reached");
+        Log.d("reached", "reached");
+
+
         if (FirebaseDatabase.getInstance() != null)
         {
             FirebaseDatabase.getInstance().goOffline();
@@ -46,6 +52,7 @@ public class Cricket extends AppCompatActivity {
                 List<cricketData> list = new ArrayList<>();
                 for(DataSnapshot ds : dataSnapshot.getChildren()) {
                     cricketData p = ds.getValue(cricketData.class);
+                    Log.d("TAG",p.getBowler()+" :)");
                     list.add(p);
                 }
                 Log.d("TAG", String.valueOf(list.size())); //To see is not emplty
@@ -62,6 +69,7 @@ public class Cricket extends AppCompatActivity {
         ref.removeEventListener(valueEventListener);
 
     }
+
 
     public static void setListViewHeightBasedOnChildren(ListView listView) {
         // Get the Adapter corresponding to ListView
@@ -84,5 +92,10 @@ public class Cricket extends AppCompatActivity {
         // params.height finally gets the height required for the complete display of the entire ListView
         listView.setLayoutParams(params);
     }
+
+
+
 }
+
+
 

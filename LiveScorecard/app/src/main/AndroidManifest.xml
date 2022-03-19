@@ -9,16 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.LiveScorecard">
-        <activity android:name=".Cricket"></activity>
+        <activity android:name=".LoginActivity"></activity>
         <activity
             android:name=".matchSummary"
             android:label="@string/title_activity_match_summary"
             android:theme="@style/Theme.LiveScorecard.NoActionBar" />
         <activity
-            android:name=".matchPage"
-            android:label="@string/title_activity_match_page"
+            android:name=".Cricket"
+            android:label="@string/title_activity_match_summary"
             android:theme="@style/Theme.LiveScorecard.NoActionBar" />
-        <activity android:name=".MainActivity" />
         <activity
             android:name=".Dashboard"
             android:exported="true"

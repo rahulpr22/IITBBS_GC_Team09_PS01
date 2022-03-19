@@ -1,14 +1,16 @@
 package com.example.livescorecard;
 
 public class cricketData {
-    private String team1,team2, team1Score, team2Score, striker1, striker2, bowler, striker1Runs, striker2Runs, bowlerStats, team1OversPlayed, team2OversPlayed;
-
+    private String date,team1,team2, team1Score, team2Score, striker1, striker2, bowler, striker1Runs, striker2Runs, bowlerStats,matchId;
+    private Long team1OversPlayed;
+    private Long team2OversPlayed;
 
     public cricketData() {
     }
 
-    public cricketData(String team1, String team2, String team1Score, String team2Score, String striker1, String striker2, String bowler, String striker1Runs, String striker2Runs, String bowlerStats, String team1OversPlayed, String team2OversPlayed) {
+    public cricketData(String date, String team1, String team2, String team1Score, String team2Score, String striker1, String striker2, String bowler, String striker1Runs, String striker2Runs, String bowlerStats, Long team1OversPlayed, Long team2OversPlayed,String matchId) {
         this.team1 = team1;
+        this.date= date;
         this.team2 = team2;
         this.team1Score = team1Score;
         this.team2Score = team2Score;
@@ -20,10 +22,27 @@ public class cricketData {
         this.bowlerStats = bowlerStats;
         this.team1OversPlayed = team1OversPlayed;
         this.team2OversPlayed = team2OversPlayed;
+        this.matchId=matchId;
+    }
+
+    public String getMatchId() {
+        return matchId;
+    }
+
+    public void setMatchId(String matchId) {
+        this.matchId = matchId;
     }
 
     public String getTeam1() {
         return team1;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
     }
 
     public void setTeam1(String team1) {
@@ -102,19 +121,19 @@ public class cricketData {
         this.bowlerStats = bowlerStats;
     }
 
-    public String getTeam1OversPlayed() {
+    public Long getTeam1OversPlayed() {
         return team1OversPlayed;
     }
 
-    public void setTeam1OversPlayed(String team1OversPlayed) {
+    public void setTeam1OversPlayed(Long team1OversPlayed) {
         this.team1OversPlayed = team1OversPlayed;
     }
 
-    public String getTeam2OversPlayed() {
+    public Long getTeam2OversPlayed() {
         return team2OversPlayed;
     }
 
-    public void setTeam2OversPlayed(String team2OversPlayed) {
+    public void setTeam2OversPlayed(Long team2OversPlayed) {
         this.team2OversPlayed = team2OversPlayed;
     }
 }
